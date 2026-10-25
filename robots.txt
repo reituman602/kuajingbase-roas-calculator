@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roas-calculator-free.netlify.app/sitemap.xml

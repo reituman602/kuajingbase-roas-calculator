@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Break-Even ROAS & CPA Calculator 2026 | E-Commerce Margin Tool</title>
+  <meta name="description" content="Calculate your exact break-even ROAS, maximum allowable CPA, and net profit margins before running Facebook, TikTok, or Google Ads. Free tool by KuajingBase.">
+  <link rel="canonical" href="https://roas-calculator-free.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://roas-calculator-free.netlify.app/">
+  <meta property="og:title" content="Free Break-Even ROAS & CPA Calculator 2026">
+  <meta property="og:description" content="Find your exact break-even ROAS and ad acquisition ceiling before burning ad spend. Built for Shopify & WooCommerce DTC sellers.">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Free Break-Even ROAS & CPA Calculator 2026">
+  <meta property="twitter:description" content="Find your exact break-even ROAS and ad acquisition ceiling before burning ad spend.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Schema.org WebApplication + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Break-Even ROAS & CPA Calculator",
+        "url": "https://roas-calculator-free.netlify.app/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "KuajingBase",
+          "url": "https://kuajingbase.com/en"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the formula for Break-Even ROAS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Break-Even ROAS = Selling Price / (Selling Price - Product Cost - Shipping Cost). It represents the exact ad return threshold where net profit equals zero."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Break-Even CPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Break-Even CPA (Cost Per Acquisition) equals your unit gross profit before advertising (Selling Price - COGS - Shipping). If your ad cost per purchase exceeds this number, you are losing money on every order."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/80 py-4 px-6 shadow-sm">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2.5">
+        <span class="text-2xl p-1.5 bg-indigo-50 rounded-xl border border-indigo-100">🧮</span>
+        <div>
+          <span class="font-black text-lg text-slate-900 tracking-tight">ROAS<span class="text-indigo-600">Pulse</span></span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-semibold px-2 py-0.5 bg-slate-100 text-slate-600 rounded-md">2026 Edition</span>
+        </div>
+      </div>
+      <a href="https://kuajingbase.com/en/toolkit" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-indigo-600 hover:text-indigo-700 bg-indigo-50/70 hover:bg-indigo-100/70 border border-indigo-200/50 px-3.5 py-2 rounded-xl transition duration-150">
+        <span>Explore 38 Free Seller Tools</span>
+        <span class="text-xs">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-10 flex-1 w-full">
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 border border-indigo-200/60 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+        <span>⚡ Precision Unit Economics</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Break-Even ROAS & CPA Calculator
+      </h1>
+      <p class="text-slate-500 text-sm sm:text-base mt-3 max-w-xl mx-auto leading-relaxed">
+        Never guess your ad budget ceiling. Calculate your exact break-even ROAS, maximum allowable acquisition cost, and gross profit floor before spending a dollar on Meta or Google Ads.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-3xl p-6 sm:p-9 shadow-xl shadow-slate-200/50 border border-slate-200/80 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">🏷️ Selling Price ($ USD) <span class="text-red-500">*</span></label>
+          <input type="number" step="0.01" id="price" placeholder="e.g. 29.99" class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition text-base font-semibold text-slate-900 bg-slate-50/50 focus:bg-white">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">💰 Product Cost / COGS ($ USD)</label>
+          <input type="number" step="0.01" id="cost" placeholder="e.g. 8.50" class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition text-base font-semibold text-slate-900 bg-slate-50/50 focus:bg-white">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">🚚 Shipping & Packaging ($ USD)</label>
+          <input type="number" step="0.01" id="shipping" placeholder="e.g. 3.20" class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition text-base font-semibold text-slate-900 bg-slate-50/50 focus:bg-white">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">📢 Target Ad Spend Per Order ($ USD)</label>
+          <input type="number" step="0.01" id="adSpend" placeholder="e.g. 6.00 (optional)" class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition text-base font-semibold text-slate-900 bg-slate-50/50 focus:bg-white">
+        </div>
+      </div>
+
+      <button id="calcBtn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold py-4 px-6 rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition duration-200 flex items-center justify-center gap-2 text-base">
+        <span>🧮 Compute Break-Even Metrics</span>
+      </button>
+    </div>
+
+    <div id="results" class="hidden bg-white rounded-3xl p-6 sm:p-9 shadow-xl shadow-slate-200/50 border border-slate-200/80 mb-10 transition-all duration-300">
+      <div id="statusHeader" class="flex items-center justify-between pb-5 border-b border-slate-100 mb-6">
+        <h2 id="statusTitle" class="text-lg font-bold flex items-center gap-2"></h2>
+        <span id="actualRoasBadge" class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700"></span>
+      </div>
+      
+      <div id="lossAlert" class="hidden bg-rose-50 border border-rose-200/80 rounded-2xl p-5 mb-6 text-sm text-rose-800 leading-relaxed">
+        <strong class="block font-bold text-rose-900 mb-1 flex items-center gap-1.5">
+          <span>🚫 Zero Ad Budget Ceiling</span>
+        </strong>
+        Your unit gross profit is ≤ 0. Every sale loses money before ad spend. Break-even ROAS and CPA are meaningless in this state. You must raise your selling price or reduce product/shipping costs first.
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center mb-8">
+        <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+          <div class="text-xs text-slate-500 font-semibold mb-1">Unit Gross Margin</div>
+          <div id="resGross" class="text-2xl font-black text-slate-900 tracking-tight">$0.00</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Price - Costs</div>
+        </div>
+        <div class="bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100/60">
+          <div class="text-xs text-indigo-700 font-semibold mb-1">Break-Even CPA</div>
+          <div id="resCPA" class="text-2xl font-black text-indigo-600 tracking-tight">$0.00</div>
+          <div class="text-[11px] text-indigo-400 mt-0.5">Max Ad Cost</div>
+        </div>
+        <div class="bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100/60">
+          <div class="text-xs text-indigo-700 font-semibold mb-1">Break-Even ROAS</div>
+          <div id="resROAS" class="text-2xl font-black text-indigo-600 tracking-tight">0.00x</div>
+          <div class="text-[11px] text-indigo-400 mt-0.5">Target Ad Floor</div>
+        </div>
+        <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
+          <div class="text-xs text-slate-500 font-semibold mb-1">Estimated Net Margin</div>
+          <div id="resMargin" class="text-2xl font-black text-slate-900 tracking-tight">0%</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">After Ad Spend</div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-slate-50 to-indigo-50/40 rounded-2xl p-5 border border-indigo-100/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3.5">
+        <div>
+          <div class="text-sm font-bold text-slate-900">Need to factor in PayPal/Stripe fees and return buffers?</div>
+          <div class="text-xs text-slate-500 mt-0.5">Simulate chargebacks, platform commissions, and multi-tier pricing.</div>
+        </div>
+        <a href="https://kuajingbase.com/en/toolkit/profit-calculator" target="_blank" rel="noopener" class="shrink-0 inline-flex items-center gap-1 text-xs font-bold text-indigo-600 hover:text-indigo-800 bg-white shadow-sm border border-slate-200 px-4 py-2.5 rounded-xl hover:shadow transition">
+          <span>Open Full Margin Suite</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <section class="bg-white rounded-3xl p-6 sm:p-9 shadow-sm border border-slate-200/80 mb-12">
+      <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+        <span>📘</span>
+        <span>How Break-Even ROAS Works (Formulas & Logic)</span>
+      </h3>
+      
+      <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
+        <div>
+          <h4 class="font-bold text-slate-800 text-base mb-1.5">1. The Core Break-Even Formula</h4>
+          <p>
+            Break-Even ROAS represents the return-on-ad-spend multiplier where you generate zero profit and zero loss. The mathematical relationship is:
+          </p>
+          <div class="bg-slate-100 font-mono text-xs text-indigo-700 p-3 rounded-xl mt-2 border border-slate-200">
+            Break-Even ROAS = Selling Price / (Selling Price - Product Cost - Shipping Cost)
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 text-base mb-1.5">2. Why Most E-Commerce Beginners Miscalculate</h4>
+          <p>
+            Many media buyers look only at blended ROAS reported in Meta Ads Manager. If your break-even ROAS is <strong>2.5x</strong> and your campaigns report <strong>2.1x</strong>, every additional sale is actively depleting your operating cash flow. Factoring in shipping and land costs first is mandatory.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 text-base mb-1.5">3. Scaling Unit Economics Beyond Paid Traffic</h4>
+          <p>
+            When scaling DTC stores, gateway processing fees (e.g. 2.9% + $0.30 per transaction on Stripe or PayPal) and currency conversion loss can silently erode 3% to 5% of gross revenue. Learn how to configure compliant multi-currency routing in our 
+            <a href="https://kuajingbase.com/en/payment" target="_blank" rel="noopener" class="text-indigo-600 font-semibold hover:underline">Cross-Border Payment Gateway Comparison Hub</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center text-xs text-slate-400 py-2">
+      <p>Tool developed, maintained & open-sourced by the engineering team at 
+        <a href="https://kuajingbase.com/en" target="_blank" rel="noopener" class="text-slate-600 font-bold hover:underline">KuajingBase</a>.
+      </p>
+      <p class="mt-1 text-slate-400">Independent reviews, compliance guides & 38 free tools for cross-border sellers.</p>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200/80 py-6 text-center text-xs text-slate-400">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <p>© 2026 ROASPulse. Hosted on Netlify Edge CDN.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/cash602-cmd/roas-calculator" target="_blank" rel="noopener" class="text-slate-500 hover:text-slate-800 transition">GitHub Source</a>
+        <span>·</span>
+        <a href="https://kuajingbase.com/en/toolkit" target="_blank" rel="noopener" class="text-slate-500 hover:text-slate-800 transition">38-in-1 Toolkit</a>
+        <span>·</span>
+        <a href="https://kuajingbase.com/en/about" target="_blank" rel="noopener" class="text-slate-500 hover:text-slate-800 transition">About KuajingBase</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("calcBtn").addEventListener("click", function() {
+      const p = parseFloat(document.getElementById("price").value);
+      const c = parseFloat(document.getElementById("cost").value) || 0;
+      const s = parseFloat(document.getElementById("shipping").value) || 0;
+      const ad = parseFloat(document.getElementById("adSpend").value) || 0;
+
+      if (isNaN(p) || p <= 0) {
+        alert("Please enter a valid selling price greater than 0.");
+        return;
+      }
+      if (c < 0 || s < 0 || ad < 0) {
+        alert("Cost and spend values cannot be negative.");
+        return;
+      }
+
+      const gross = p - c - s;
+      const resultsDiv = document.getElementById("results");
+      const lossAlert = document.getElementById("lossAlert");
+      const statusTitle = document.getElementById("statusTitle");
+      const actualRoasBadge = document.getElementById("actualRoasBadge");
+
+      resultsDiv.classList.remove("hidden");
+      document.getElementById("resGross").innerText = "$" + gross.toFixed(2);
+
+      if (gross <= 0) {
+        lossAlert.classList.remove("hidden");
+        statusTitle.innerHTML = "<span class=\"text-rose-600 font-extrabold\">⚠️ Loss Warning: No Ad Margin</span>";
+        actualRoasBadge.innerText = "Unit Negative";
+        actualRoasBadge.className = "text-xs font-bold px-3 py-1 rounded-full bg-rose-100 text-rose-700";
+        document.getElementById("resCPA").innerText = "N/A";
+        document.getElementById("resROAS").innerText = "N/A";
+        document.getElementById("resMargin").innerText = ((gross / p) * 100).toFixed(1) + "%";
+      } else {
+        lossAlert.classList.add("hidden");
+        statusTitle.innerHTML = "<span class=\"text-emerald-600 font-extrabold\">✅ Profitable Unit Economics</span>";
+        document.getElementById("resCPA").innerText = "$" + gross.toFixed(2);
+        
+        const beRoas = (p / gross).toFixed(2) + "x";
+        document.getElementById("resROAS").innerText = beRoas;
+
+        if (ad > 0) {
+          const actRoas = (p / ad).toFixed(2) + "x";
+          actualRoasBadge.innerText = "Actual ROAS: " + actRoas;
+          actualRoasBadge.className = "text-xs font-bold px-3 py-1 rounded-full bg-indigo-100 text-indigo-700";
+          const netProfit = gross - ad;
+          const netMargin = ((netProfit / p) * 100).toFixed(1) + "%";
+          document.getElementById("resMargin").innerText = netMargin;
+        } else {
+          actualRoasBadge.innerText = "Zero Ad Spend";
+          actualRoasBadge.className = "text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-600";
+          document.getElementById("resMargin").innerText = ((gross / p) * 100).toFixed(1) + "%";
+        }
+      }
+
+      resultsDiv.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  </script>
+</body>
+</html>
